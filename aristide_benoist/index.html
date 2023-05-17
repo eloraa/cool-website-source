@@ -8,7 +8,7 @@
     <style>
         @font-face {
             font-family: "TNY";
-            src: url(/static/font/t.woff2)format("woff2");
+            src: url(./static/font/t.woff2)format("woff2");
             font-weight: 400;
             font-style: normal;
             font-display: swap
@@ -16,7 +16,7 @@
 
         @font-face {
             font-family: "jws";
-            src: url(/static/font/jw.woff2)format("woff2");
+            src: url(./static/font/jw.woff2)format("woff2");
             font-weight: 700;
             font-style: normal;
             font-display: swap
@@ -115,7 +115,6 @@
             box-sizing: border-box
         }
     </style>
-    <link rel="canonical" href="https://aristidebenoist.com">
     <meta name="robots" content="all">
     <title>Aristide Benoist — Independent developer</title>
     <meta name="description"
@@ -126,20 +125,17 @@
     <meta name="twitter:title" content="Aristide Benoist — Independent developer">
     <meta name="twitter:description"
         content="Aristide Benoist is a developer who specializes in motion and interaction. As an independent, he works with companies, agencies, startups and individuals all over the world.">
-    <meta name="twitter:image" content="https://aristidebenoist.com/static/og/1200-630.jpg">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://aristidebenoist.com">
     <meta property="og:title" content="Aristide Benoist — Independent developer">
     <meta property="og:description"
         content="Aristide Benoist is a developer who specializes in motion and interaction. As an independent, he works with companies, agencies, startups and individuals all over the world.">
-    <meta property="og:image" content="https://aristidebenoist.com/static/og/1200-630.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <link rel="icon" href="/static/fav/fav.ico?2" sizes="any">
-    <link rel="icon" href="/static/fav/fav.svg?2">
-    <link rel="mask-icon" href="/static/fav/fav-mask.svg?2" color="#0B0C0C">
-    <link rel="apple-touch-icon" href="/static/fav/apple-touch.png?2">
-    <link crossorigin="use-credentials" rel="manifest" href="/static/fav/manifest.json?2">
+    <link rel="icon" href="./static/fav/fav.ico?2" sizes="any">
+    <link rel="icon" href="./static/fav/fav.svg?2">
+    <link rel="mask-icon" href="./static/fav/fav-mask.svg?2" color="#0B0C0C">
+    <link rel="apple-touch-icon" href="./static/fav/apple-touch.png?2">
+    <link crossorigin="use-credentials" rel="manifest" href="./static/fav/manifest.json?2">
     <meta name="theme-color" content="#171717">
     <script>
         window._A = {
@@ -188,7 +184,7 @@
                 n = /Mobi|Andrdoid|Tablet|iPad|iPhone/.test(e.userAgent) || "MacIntel" === e.platform && e
                 .maxTouchPoints > 1 ? "m" : "d",
                 s = t.createElement("link");
-            s.rel = "stylesheet", s.href = "/static/css/" + n + ".css?" + _A.config.v, t.head.appendChild(s);
+            s.rel = "stylesheet", s.href = "./static/css/" + n + ".css?" + _A.config.v, t.head.appendChild(s);
             const a = t.createElement("script");
             a.src = "./" + n + ".js?" + _A.config.v, t.onreadystatechange = e => {
                 "complete" === t.readyState && t.body.appendChild(a)

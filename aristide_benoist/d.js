@@ -600,7 +600,7 @@ R.ROR = class {
         introXhr(t) {
             const s = _A;
             R.Fetch({
-                url: s.route.new.url + "./xhr.json",
+                url: "./xhr.json",
                 type: "html",
                 success: s => {
                     const e = JSON.parse(s),
@@ -834,7 +834,7 @@ R.ROR = class {
                 n = o.workL;
             this.tex = [], this.texL = n;
             for (let t = 0; t < n; t++) {
-                const i = "/static/media/" + h[t].folder + "/h/0" + r;
+                const i = "./static/media/" + h[t].folder + "/h/0" + r;
                 this.imgSet({
                     src: i,
                     index: t
@@ -1932,7 +1932,7 @@ R.ROR = class {
                 shape: "cross"
             });
             const i = this.work[t.index];
-            this.media = i.media, this.mediaL = i.mediaL, this.base = "/static/media/" + i.folder + "/w/", this.isWork && (t.wIndex = this.media[0]);
+            this.media = i.media, this.mediaL = i.mediaL, this.base = "./static/media/" + i.folder + "/w/", this.isWork && (t.wIndex = this.media[0]);
             let s = 0;
             this.no = {}, this.pos = [];
             for (let t = 0; t < this.qty; t++) {
