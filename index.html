@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=5">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+    <style>
+       
+
+        html {
+            -webkit-text-size-adjust: none;
+            -webkit-font-smoothing: antialiased;
+            cursor: default;
+            -webkit-tap-highlight-color: transparent;
+            background-color: #302222;
+        }
+        html,
+        body {
+            height: 100%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #E29191
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: inherit;
+        }
+        ._logo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            mix-blend-mode: luminosity;
+        }
+        ._logo h1 {
+            font-family: 'Italiana', serif;
+            font-weight: 100;
+        }
+        ._image {
+            height: 100vh;
+            object-fit: contain;
+            padding: 0 1em;
+        }
+        ._fill {
+            height: 95vh
+        }
+
+    </style>
+    <title>404</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <div class="__root">
+        <div class="_logo">
+            <h1>cdiv</h1>
+        </div>
+        <div class="_fill"></div>
+        <div class="_image">
+        </div>
+
+    </div>
+
+
+    <noscript>
+        <div class="no-js">Please enable JavaScript to view this website.</div>
+    </noscript>
+    <script>
+        window._ = {
+            media: {1: ['01'], 2: ['02'], 3:['03'], 4: ['04'], 5: ['05'], 6: ['06']}
+        };
+        
+        ! function () {
+            "use strict";
+            const _ = document.createElement('img')
+            _.src = './static/media/images/' + window._.media[Math.floor(Math.random() * 6)+1] + '.jpg'
+            _.onload = () => document.querySelector('._image').appendChild(_)
+            
+            ScrollTrigger.create({
+                animation: gsap.from('._logo', {
+                    y: '50vh',
+                    scale: 3
+                }),
+                scrub: true,
+                trigger: '._image',
+                start: 'top bottom',
+                endTrigger: '._image',
+                end: 'top center'
+            })
+        }();
+    </script>
+</body>
+
+</html>
