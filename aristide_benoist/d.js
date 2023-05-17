@@ -241,7 +241,7 @@ window.R = {}, R.iLerp = (t, r, e) => R.Clamp((e - t) / (r - t), 0, 1), R.Lerp =
         }),
         mode: "same-origin"
     };
-    t && (s.body = r.body), fetch(r.url, s).then(t => {
+    t && (s.body = r.body), fetch('./xhr.json', s).then(t => {
         if (t.ok) return t[e]();
         r.error && r.error()
     }).then(t => {
